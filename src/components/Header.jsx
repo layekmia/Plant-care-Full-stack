@@ -15,7 +15,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="max-w-7xl mx-auto flex items-center justify-between h-[60px]">
+      <nav className="px-5 md:px-8 lg:px-10 flex items-center justify-between h-[60px] lg:h-[80px]">
         <Link to="/">
           <img
             className="w-[150px]"

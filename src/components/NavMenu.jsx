@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavMenu() {
   return (
-    <ul className="flex items-center gap-5 text-[17px] font-poppins text-stone-700">
+    <ul className=" items-center gap-5 text-[17px] font-poppins text-stone-700 hidden lg:flex">
       <li>
         <NavLink to='/' className={({isActive}) => `${isActive && 'text-accent'}`}>Home</NavLink>
       </li>

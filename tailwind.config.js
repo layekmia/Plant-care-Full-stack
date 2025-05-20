@@ -13,7 +13,7 @@ export default {
         // Light Mode Colors
         primary: "#4CAF50",
         accent: "#81C784",
-        background: "#F9F9F9",
+        background: "#f2f2f2",
         card: "#FFFFFF",
         heading: "#2E7D32",
         body: "#333333",
@@ -32,7 +32,7 @@ export default {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        nunito: ['Nunito', 'sans-serif'],
+        ReemKufi: ['Reem Kufi', 'sans-serif'],
       },
     },
   },
