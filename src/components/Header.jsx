@@ -5,6 +5,7 @@ import { usePlants } from "../context/PlantContext";
 import { Dropdown, DropdownHeader, DropdownItem } from "flowbite-react";
 import { signOut } from "firebase/auth";
 import auth from "../firebase/firebase";
+import { FaLeaf } from "react-icons/fa";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -15,16 +16,15 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="px-5 md:px-8 lg:px-10 flex items-center justify-between h-[60px] lg:h-[80px]">
+      <nav className="px-5 md:px-8 lg:px-10 flex items-center justify-between h-[60px]">
         <Link to="/">
-          <img
-            className="w-[150px]"
-            src="https://min-plant-store-demo.myshopify.com/cdn/shop/files/logo.png?v=1613699045"
-            alt=""
-          />
+          <div className="flex items-center text-2xl font-bold gap-2 mb-2">
+            <FaLeaf className="text-green-300" />
+            <span>Min Plant</span>
+          </div>
         </Link>
         <NavMenu />
-        {user  ? (
+        {user ? (
           <Dropdown
             label=""
             dismissOnClick={false}
