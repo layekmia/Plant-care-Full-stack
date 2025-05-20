@@ -3,9 +3,15 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import { RouterProvider } from "react-router-dom";
 import router from "./Routes/Routes";
+import AuthProvider from "./context/AuthContext";
+import PlantsDataProvider from "./context/PlantContext";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <PlantsDataProvider>
+        <RouterProvider router={router} />
+      </PlantsDataProvider>
+    </AuthProvider>
   </StrictMode>
 );
