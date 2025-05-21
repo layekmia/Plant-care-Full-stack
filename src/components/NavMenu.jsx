@@ -2,21 +2,21 @@ import { NavLink } from "react-router-dom";
 
 export default function NavMenu() {
   return (
-    <ul className=" items-center gap-5 text-base font-poppins text-stone-700 hidden lg:flex">
+    <ul className=" items-center text-base font-poppins text-stone-700 hidden lg:flex">
       <li>
-        <NavLink to='/' className={({isActive}) => `${isActive && 'text-green-800'}`}>Home</NavLink>
+        <NavLink to='/' className={({isActive}) => `py-2 px-5 rounded-md ${isActive && 'bg-green-600 text-white'}`}>Home</NavLink>
       </li>
       <li>
-        <NavLink to='/all-plants' className={({isActive}) => `${isActive && 'text-green-800'}`}>All Plants</NavLink>
+        <NavLink to='/all-plants' className={({isActive}) => `py-2 px-5 rounded-md ${isActive && 'bg-green-600 text-white'}`}>All Plants</NavLink>
       </li>
       <li>
-        <NavLink to='/add-new-plant' className={({isActive}) => `${isActive && 'text-green-800'}`}>Add Plant</NavLink>
+        <NavLink to='/add-new-plant' className={({isActive}) => `py-2 px-5 rounded-md ${isActive && 'bg-green-600 text-white'}`}>Add Plant</NavLink>
       </li>
       <li>
-        <NavLink to='/dashboard' className={({isActive}) => `${isActive && 'text-green-800'}`}>Dashboard</NavLink>
+        <NavLink to='/dashboard' className={({isActive}) => `py-2 px-5 rounded-md ${isActive && 'bg-green-600 text-white'}`}>Dashboard</NavLink>
       </li>
       <li>
-        <NavLink to='/about-us' className={({isActive}) => `${isActive && 'text-green-800'}`}>About us</NavLink>
+        <NavLink to='/about-us' className={({isActive}) => `py-2 px-5 rounded-md ${isActive && 'bg-green-600 text-white'}`}>About us</NavLink>
       </li>
     </ul>
   );

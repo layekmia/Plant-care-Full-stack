@@ -9,7 +9,8 @@ export default function Banner() {
    <div className="bg-background">
      <div className=" h-[calc(100vh-60px)] md:h-[520px]  max-w-6xl mx-auto px-5 md:px-8 lg:px-0">
       <Swiper
-        // autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        loop={true}
         pagination={true}
         modules={[Pagination, Autoplay]}
         className="mySwiper h-full"

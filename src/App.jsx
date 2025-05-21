@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { ToastContainer } from "react-toastify";
@@ -7,8 +7,8 @@ import Spinner from "./components/Spinner";
 
 export default function App() {
   const { isLoading } = usePlants();
-
-  if (isLoading) return <Spinner />;
+  const navigation = useNavigation();
+  if (isLoading || navigation.state === 'loading') return <Spinner />;
 
   return (
     <>

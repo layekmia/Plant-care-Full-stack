@@ -4,12 +4,14 @@ import Error from "../pages/Error";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import AllPlants from "../pages/AllPlants";
-import AddPlant from "../pages/AddPlant";
+import AllPlants, { plantsLoader } from "../pages/AllPlants";
+import AddPlant from "../pages/AddNewPlant";
 import Dashboard from "../pages/Dashboard";
 import About from "../pages/About";
 import PrivateRoutes from "../components/PrivateRoutes";
 import AuthPrivate from "../components/AuthPrivate";
+import PlantDetails, { plantLoader } from "../pages/PlantDetails";
+import UpdatePlant, { updatePlantLoader } from "../pages/UpdatePlant";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +36,16 @@ const router = createBrowserRouter([
           </AuthPrivate>
         ),
       },
-      { path: "/all-plants", element: <AllPlants /> },
+      { path: "/all-plants", element: <AllPlants />, loader: plantsLoader },
+      {
+        path: "/plant-details/:id",
+        element: (
+          <PrivateRoutes>
+            <PlantDetails />
+          </PrivateRoutes>
+        ),
+        loader: plantLoader,
+      },
       {
         path: "/add-new-plant",
         element: (
@@ -50,6 +61,15 @@ const router = createBrowserRouter([
             <Dashboard />
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "/dashboard/update-plant/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdatePlant />
+          </PrivateRoutes>
+        ),
+        loader: updatePlantLoader
       },
       { path: "/about-us", element: <About /> },
     ],
