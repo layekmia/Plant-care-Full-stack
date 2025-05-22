@@ -39,7 +39,7 @@ export default function MobileNabMenu() {
     >
       <button
         onClick={() => setIsOpen(false)}
-        className="text-right w-full px-5 py-3 bg-green-600 flex items-center gap-2 justify-end text-white font-semibold text-sm  font-poppins uppercase"
+        className="text-right w-full px-5 py-3 bg-green-600 dark:bg-dark-background flex items-center gap-2 justify-end text-white font-semibold text-sm  font-poppins uppercase"
       >
         close <RxCross1 />
       </button>
@@ -56,7 +56,7 @@ export default function MobileNabMenu() {
               to={to}
               onClick={handleLinkClick}
               className={({ isActive }) =>
-                `py-[10px] border-b block pl-10 hover:text-green-600 dark:text-white ${
+                `py-[10px] border-b dark:border-gray-600 block pl-10 hover:text-green-600 dark:text-white ${
                   isActive ? "text-green-600" : ""
                 }`
               }

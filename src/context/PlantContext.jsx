@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import auth from "../firebase/firebase";
 
@@ -9,6 +9,7 @@ export default function PlantsDataProvider({ children }) {
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const modalShownRef = useRef(false);
 
   useEffect(() => {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
@@ -17,7 +18,10 @@ export default function PlantsDataProvider({ children }) {
         setUser({ name, email, image, uid });
       } else {
         setUser(null);
-        setShowModal(true);
+        if (!modalShownRef.current) {
+          setShowModal(true);
+          modalShownRef.current = true;
+        }
       }
       setIsLoading(false);
     });

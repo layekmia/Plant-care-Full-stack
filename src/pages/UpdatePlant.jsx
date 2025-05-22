@@ -58,21 +58,21 @@ export default function UpdatePlant() {
     }
   };
 
-  if (!formData) return <p className="text-center mt-10">Loading...</p>;
+  if (!formData) return null;
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4 dark:bg-dark-background">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-5xl bg-white p-8 rounded-xl"
+        className="w-full max-w-5xl bg-white dark:bg-dark-background p-8 rounded-xl"
       >
-        <h2 className="max-w-fit mx-auto pb-1 mb-10 text-center text-2xl lg:text-3xl text-green-800 font-poppins font-semibold uppercase border-b-2">
+        <h2 className="max-w-fit mx-auto pb-1 mb-10 text-center text-2xl lg:text-3xl text-green-800 font-poppins font-semibold uppercase border-b-2 dark:border-gray-600 dark:text-white">
           update your plant
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block mb-1 font-medium text-stone-600">Image URL</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Image URL</label>
             <input
               type="text"
               name="image"
@@ -83,7 +83,7 @@ export default function UpdatePlant() {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">Plant Name</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Plant Name</label>
             <input
               type="text"
               name="name"
@@ -94,7 +94,7 @@ export default function UpdatePlant() {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">Category</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Category</label>
             <select
               name="category"
               value={formData.category}
@@ -109,7 +109,7 @@ export default function UpdatePlant() {
             </select>
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">Care Level</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Care Level</label>
             <select
               name="careLevel"
               value={formData.careLevel}
@@ -124,7 +124,7 @@ export default function UpdatePlant() {
             </select>
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">Watering Frequency</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Watering Frequency</label>
             <input
               type="text"
               name="wateringFrequency"
@@ -135,7 +135,7 @@ export default function UpdatePlant() {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">Last Watered Date</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Last Watered Date</label>
             <input
               type="date"
               name="lastWateredDate"
@@ -146,7 +146,7 @@ export default function UpdatePlant() {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">Next Watering Date</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Next Watering Date</label>
             <input
               type="date"
               name="nextWateringDate"
@@ -157,7 +157,7 @@ export default function UpdatePlant() {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">Health Status</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Health Status</label>
             <input
               type="text"
               name="healthStatus"
@@ -168,7 +168,7 @@ export default function UpdatePlant() {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">User Name</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">User Name</label>
             <input
               type="text"
               name="userName"
@@ -178,7 +178,7 @@ export default function UpdatePlant() {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">User Email</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">User Email</label>
             <input
               type="email"
               name="userEmail"
@@ -188,7 +188,7 @@ export default function UpdatePlant() {
             />
           </div>
           <div className="md:col-span-2">
-            <label className="block mb-1 font-medium text-stone-600">Description</label>
+            <label className="block dark:text-white mb-1 font-medium text-stone-600">Description</label>
             <textarea
               name="description"
               value={formData.description}
@@ -201,7 +201,7 @@ export default function UpdatePlant() {
         </div>
         <button
           type="submit"
-          className="mt-6 w-full bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition"
+          className="mt-6 w-full bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition dark:bg-gray-600"
         >
           Submit
         </button>

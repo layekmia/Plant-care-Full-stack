@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { usePlants } from "../context/PlantContext";
 
 export default function SubscribeModal() {
@@ -32,9 +32,9 @@ export default function SubscribeModal() {
         <div className="md:w-1/2 p-8 relative">
           <button
             onClick={modalClose}
-            className="absolute hidden md:block top-4 right-4 text-gray-500 hover:text-black text-xl"
+            className="absolute hidden md:block top-2 right-4 text-gray-500 hover:text-black text-lg"
           >
-            ×
+            X
           </button>
 
           <h2 className="text-2xl font-light text-gray-900 mb-2">

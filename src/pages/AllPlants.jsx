@@ -29,7 +29,7 @@ export default function AllPlants() {
     }
 
     setPlants(sorted);
-  }, [sortBy, order, data]);
+  }, [sortBy, order, data,]);
 
   return (
     <section className="px-2 py-8 dark:bg-dark-background">
