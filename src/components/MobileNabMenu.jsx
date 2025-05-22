@@ -33,7 +33,7 @@ export default function MobileNabMenu() {
       )}
     <div
       ref={menuRef}
-      className={`fixed top-0 bg-white h-screen w-[250px] z-50 md:hidden ${
+      className={`fixed top-0 bg-white dark:bg-gray-800 h-screen w-[250px] z-50 md:hidden ${
         isOpen ? "translate-x-0" : "-translate-x-[110%]"
       } transition-transform duration-500`}
     >
@@ -56,7 +56,7 @@ export default function MobileNabMenu() {
               to={to}
               onClick={handleLinkClick}
               className={({ isActive }) =>
-                `py-[10px] border-b block pl-10 hover:text-green-600 ${
+                `py-[10px] border-b block pl-10 hover:text-green-600 dark:text-white ${
                   isActive ? "text-green-600" : ""
                 }`
               }

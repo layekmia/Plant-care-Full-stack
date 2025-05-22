@@ -23,7 +23,7 @@ export default function Header() {
   return (
     <nav className="bg-white dark:bg-[#1f2937] shadow-sm sticky top-0 z-50 h-[60px] md:h-auto">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-       <button onClick={() => setIsOpen(true)} className="text-2xl text-gray-600 md:hidden"><HiMiniBars3BottomLeft /></button>
+       <button onClick={() => setIsOpen(true)} className="text-2xl text-gray-600 dark:text-white md:hidden"><HiMiniBars3BottomLeft /></button>
 
         <Link to="/" className="text-2xl font-bold text-gray-800 dark:text-white">
           P🌿lantPal
