@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter, FaInstagram, FaLeaf } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -6,8 +6,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
         <div>
           <div className="flex items-center text-2xl font-bold gap-2 mb-2">
-            <FaLeaf className="text-green-300" />
-            <span>Min Plant</span>
+           P🌿lantPal
           </div>
           <p className="text-sm text-gray-200">
             Helping you grow, water, and care for your plants with confidence.

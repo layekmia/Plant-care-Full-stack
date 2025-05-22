@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { usePlants } from "../context/PlantContext";
 import axios from "axios";
+import { BASE_URL } from "../utils/service";
 
 const AddPlant = () => {
   const { user } = usePlants();
@@ -29,7 +30,7 @@ const AddPlant = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/web/api/plants", formData);
+      await axios.post(BASE_URL, formData);
       setFormData({
         image: "",
         name: "",

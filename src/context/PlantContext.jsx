@@ -7,6 +7,8 @@ const plantsContext = createContext();
 export default function PlantsDataProvider({ children }) {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
@@ -15,14 +17,21 @@ export default function PlantsDataProvider({ children }) {
         setUser({ name, email, image, uid });
       } else {
         setUser(null);
+        setShowModal(true);
       }
       setIsLoading(false);
     });
     return () => unsubcribe();
   }, []);
 
+  function modalClose() {
+    setShowModal(false);
+  }
+
   return (
-    <plantsContext.Provider value={{ user, isLoading }}>
+    <plantsContext.Provider
+      value={{ user, isLoading, isOpen, setIsOpen, showModal, modalClose }}
+    >
       {children}
     </plantsContext.Provider>
   );

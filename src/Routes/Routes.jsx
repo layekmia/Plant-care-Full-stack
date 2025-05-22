@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
-import Error from "../pages/Error";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -12,12 +11,13 @@ import PrivateRoutes from "../components/PrivateRoutes";
 import AuthPrivate from "../components/AuthPrivate";
 import PlantDetails, { plantLoader } from "../pages/PlantDetails";
 import UpdatePlant, { updatePlantLoader } from "../pages/UpdatePlant";
+import ErrorPage from "../pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home /> },
       {

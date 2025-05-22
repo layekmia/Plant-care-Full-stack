@@ -4,20 +4,24 @@ import Header from "./components/Header";
 import { ToastContainer } from "react-toastify";
 import { usePlants } from "./context/PlantContext";
 import Spinner from "./components/Spinner";
+import MobileNabMenu from "./components/MobileNabMenu";
+import SubscribeModal from "./components/SubscriptionModal";
 
 export default function App() {
-  const { isLoading } = usePlants();
+  const { isLoading, showModal } = usePlants();
   const navigation = useNavigation();
-  if (isLoading || navigation.state === 'loading') return <Spinner />;
+  if (isLoading || navigation.state === "loading") return <Spinner />;
 
   return (
     <>
-      <div>
+      <div className="relative">
         <Header />
         <main className="min-h-screen">
           <Outlet />
         </main>
         <Footer />
+        <MobileNabMenu />
+        {showModal && <SubscribeModal/>}
       </div>
       <ToastContainer />
     </>
