@@ -1,41 +1,6 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { getPlantsData } from "../utils/service";
 import PlantsItem from "../components/PlantsItem";
-
-const plants = [
-  {
-    id: 1,
-    name: "ZZ Plant",
-    category: "Indoor",
-    watering: "Once a week",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/ruby-rubber-tree-3.jpg",
-  },
-  {
-    id: 2,
-    name: "Echeveria",
-    category: "Succulent",
-    watering: "Every 2 weeks",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/ruby-rubber-tree-3.jpg",
-  },
-  {
-    id: 3,
-    name: "Jade Plant",
-    category: "Succulent",
-    watering: "Once a week",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/ruby-rubber-tree-3.jpg",
-  },
-  {
-    id: 4,
-    name: "Rubber Tree",
-    category: "Indoor",
-    watering: "Every 5 days",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/ruby-rubber-tree-3.jpg",
-  },
-];
 
 export default function AllPlants() {
   const {data} = useLoaderData();

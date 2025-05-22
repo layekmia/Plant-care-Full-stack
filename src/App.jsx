@@ -21,9 +21,9 @@ export default function App() {
         </main>
         <Footer />
         <MobileNabMenu />
-        {/* {showModal && <SubscribeModal/>} */}
+        {showModal && <SubscribeModal/>}
       </div>
-      <ToastContainer />
+      <ToastContainer autoClose={1000} />
     </>
   );
 }

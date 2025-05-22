@@ -6,9 +6,9 @@ const ErrorPage = () => {
   return (
     <>
       <Header/>
-      <div className="min-h-screen bg-green-100 flex flex-col justify-center items-center text-center px-6">
+      <div className="min-h-screen bg-green-50 dark:bg-dark-background flex flex-col justify-center items-center text-center px-6">
         <h1 className="text-9xl font-bold text-green-800 mb-4">404</h1>
-        <h2 className="text-3xl font-semibold text-gray-800 mb-2">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-2 dark:text-gray-400">
           Page Not Found
         </h2>
         <p className="text-gray-600 mb-6 max-w-md">

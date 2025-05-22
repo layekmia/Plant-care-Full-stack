@@ -1,5 +1,3 @@
-// AvoidMistakesSection.jsx
-
 export default function AvoidMistakesSection() {
   const mistakes = [
     {
