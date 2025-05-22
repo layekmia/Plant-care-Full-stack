@@ -7,6 +7,7 @@ import { BASE_URL } from "../utils/service";
 
 const AddPlant = () => {
   const { user } = usePlants();
+  const [loading, setIsLoading] = useState(false);
 
   const [formData, setFormData] = useState({
     image: "",
@@ -29,6 +30,7 @@ const AddPlant = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     try {
       await axios.post(BASE_URL, formData);
       setFormData({
@@ -48,6 +50,8 @@ const AddPlant = () => {
     } catch (error) {
       console.log(error);
       toast.error("Failed to add plant", error.message);
+    }finally{
+      setIsLoading(false)
     }
   };
 
@@ -217,11 +221,10 @@ const AddPlant = () => {
             />
           </div>
         </div>
-        <button
-          type="submit"
-          className="mt-6 w-full bg-green-700 dark:bg-gray-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition"
+        <button disabled={loading}
+          className={`mt-6 w-full bg-green-700 dark:bg-gray-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition ${loading ? 'opacity-60': ''}`}
         >
-          Submit
+          {loading ? 'Submiting....' : 'Submit'}
         </button>
       </form>
     </div>
