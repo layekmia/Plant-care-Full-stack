@@ -2,7 +2,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-800 text-white dark:bg-[#111827]">
+    <footer className="bg-green-800 text-white dark:bg-[#1f2937]">
       <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
         <div>
           <div className="flex items-center text-2xl font-bold gap-2 mb-2">
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-green-700 mt-6 py-4 text-center text-sm text-gray-300">
+      <div className="border-t border-green-700 dark:border-gray-700 mt-6 py-4 text-center text-sm text-gray-300">
         © {new Date().getFullYear()} Min Plant. All rights reserved.
       </div>
     </footer>

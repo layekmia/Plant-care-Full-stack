@@ -6,7 +6,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 export default function Banner() {
   return (
-   <div className="bg-background dark:bg-[#111827]">
+   <div className="bg-background dark:bg-dark-background">
      <div className=" h-[calc(100vh-60px)] md:h-[520px]    md:px-8 lg:px-0">
       <Swiper
         autoplay={{ delay: 2000, disableOnInteraction: false }}

@@ -7,7 +7,7 @@ export default function NavMenu() {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `hover:text-green-600 ${isActive && "text-green-600"}`
+            `hover:text-green-400 ${isActive && "text-green-400"}`
           }
         >
           Home
@@ -17,7 +17,7 @@ export default function NavMenu() {
         <NavLink
           to="/all-plants"
           className={({ isActive }) =>
-            `hover:text-green-600 ${isActive && "text-green-600"}`
+            `hover:text-green-400 ${isActive && "text-green-400"}`
           }
         >
           All Plants
@@ -27,7 +27,7 @@ export default function NavMenu() {
         <NavLink
           to="/add-new-plant"
           className={({ isActive }) =>
-            `hover:text-green-600 ${isActive && "text-green-600"}`
+            `hover:text-green-400 ${isActive && "text-green-400"}`
           }
         >
           Add Plant
@@ -37,7 +37,7 @@ export default function NavMenu() {
         <NavLink
           to="/dashboard"
           className={({ isActive }) =>
-            `hover:text-green-600 ${isActive && "text-green-600"}`
+            `hover:text-green-400 ${isActive && "text-green-400"}`
           }
         >
           Dashboard
@@ -47,7 +47,7 @@ export default function NavMenu() {
         <NavLink
           to="/about-us"
           className={({ isActive }) =>
-            `hover:text-green-600 ${isActive && "text-green-600"}`
+            `hover:text-green-400 ${isActive && "text-green-400"}`
           }
         >
           About us

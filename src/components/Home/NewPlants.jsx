@@ -54,7 +54,7 @@ const newPlants = [
 export default function NewPlants() {
   return (
     <div className="py-12 md:py-16 lg:py-24 dark:bg-[#111827]">
-      <h2 className="max-w-fit mx-auto pb-1 mb-10 text-center  text-2xl lg:text-3xl text-green-800 font-poppins font-semibold uppercase border-b-2 ">
+      <h2 className="max-w-fit mx-auto pb-1 mb-10 text-center  text-2xl lg:text-3xl text-green-800 font-poppins font-semibold uppercase border-b-2 dark:text-white">
         New Plants
       </h2>
       <div className="max-w-7xl mx-auto px-5 md:px-8  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

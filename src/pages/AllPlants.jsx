@@ -41,13 +41,14 @@ export default function AllPlants() {
   const {data} = useLoaderData();
 
   return (
-    <section className="max-w-7xl mx-auto px-2 py-8">
-      <h2 className="text-2xl font-bold text-green-800 mb-6 text-center uppercase tracking-wider">
-        All Plants
-      </h2>
+    <section className=" px-2 py-8 dark:bg-dark-background">
 
-      <div className="overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-sm">
+      <div>
+        <h2 className="text-green-500 dark:text-white font-semibold text-2xl uppercase text-center pt-5 pb-2">See Our All Plants</h2>
+        <p className="text-center text-stone-500 dark:text-gray-300 max-w-2xl text-sm mx-auto pb-10">Discover a wide variety of beautiful and healthy plants carefully selected to brighten your space. Whether you're a beginner or a seasoned plant lover, we have something for everyone to grow and enjoy.</p>
+      </div>
+      <div className="overflow-x-auto max-w-7xl mx-auto">
+        <table className="min-w-full bg-white dark:bg-dark-background border dark:border-none border-gray-200 dark:border-gray-700 rounded-lg shadow-sm dark:shadow-0 dark:text-white">
           <thead className="bg-green-800 text-white">
             <tr>
               <th className="py-3 px-4 text-left">Image</th>

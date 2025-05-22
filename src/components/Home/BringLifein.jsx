@@ -9,10 +9,10 @@ export default function BringLifeIn() {
   return (
     <section className="py-10 lg:py-16 bg-background dark:bg-[#111827]">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-light text-gray-900">
+        <h2 className="text-3xl font-light text-gray-900 dark:text-white">
           #bring<span className="italic font-medium">life</span>in
         </h2>
-        <p className="text-gray-500 text-sm mt-2">
+        <p className="text-gray-500 dark:text-gray-400 text-sm mt-2">
           Our community has a thing for plant styling. Get inspired.
         </p>
       </div>

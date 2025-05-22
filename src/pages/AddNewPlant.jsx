@@ -52,18 +52,18 @@ const AddPlant = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4 dark:bg-dark-background">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-5xl bg-white p-8 rounded-xl"
+        className="w-full max-w-5xl bg-white p-8 rounded-xl  dark:bg-dark-background"
       >
-        <h2 className="max-w-fit mx-auto pb-1 mb-10 text-center text-2xl lg:text-3xl text-green-800 font-poppins font-semibold uppercase border-b-2">
+        <h2 className="max-w-fit mx-auto pb-1 mb-10 text-center text-2xl lg:text-3xl text-green-800 font-poppins font-semibold uppercase border-b-2 dark:border-gray-600 dark:text-white">
           Add New Plant
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Image URL
             </label>
             <input
@@ -77,7 +77,7 @@ const AddPlant = () => {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Plant Name
             </label>
             <input
@@ -91,7 +91,7 @@ const AddPlant = () => {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Category
             </label>
             <select
@@ -108,7 +108,7 @@ const AddPlant = () => {
             </select>
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Care Level
             </label>
             <select
@@ -125,7 +125,7 @@ const AddPlant = () => {
             </select>
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Watering Frequency
             </label>
             <input
@@ -139,7 +139,7 @@ const AddPlant = () => {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Last Watered Date
             </label>
             <input
@@ -152,7 +152,7 @@ const AddPlant = () => {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Next Watering Date
             </label>
             <input
@@ -165,7 +165,7 @@ const AddPlant = () => {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Health Status
             </label>
             <input
@@ -179,7 +179,7 @@ const AddPlant = () => {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               User Name
             </label>
             <input
@@ -191,7 +191,7 @@ const AddPlant = () => {
             />
           </div>
           <div>
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               User Email
             </label>
             <input
@@ -203,7 +203,7 @@ const AddPlant = () => {
             />
           </div>
           <div className="md:col-span-2">
-            <label className="block mb-1 font-medium text-stone-600">
+            <label className="block mb-1 dark:text-white font-medium text-stone-600">
               Description
             </label>
             <textarea
@@ -219,7 +219,7 @@ const AddPlant = () => {
         </div>
         <button
           type="submit"
-          className="mt-6 w-full bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition"
+          className="mt-6 w-full bg-green-700 dark:bg-gray-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition"
         >
           Submit
         </button>

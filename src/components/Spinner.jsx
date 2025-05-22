@@ -1,6 +1,6 @@
 export default function Spinner() {
   return (
-    <div className="flex items-center justify-center h-screen bg-white">
+    <div className="flex items-center justify-center h-screen bg-white dark:bg-dark-background">
       <div className="w-16 h-16 border-4 border-green-500 border-dashed rounded-full animate-spin"></div>
     </div>
   );

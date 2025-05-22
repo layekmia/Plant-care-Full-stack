@@ -20,7 +20,7 @@ export default function SubscribeModal() {
 
   return (
    <div  className="fixed px-8 md:px-0 inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
-      <div ref={modalRef} className="bg-white max-w-2xl w-full flex flex-col md:flex-row rounded-md overflow-hidden shadow-lg">
+      <div ref={modalRef} className="bg-white  max-w-2xl w-full flex flex-col md:flex-row rounded-md overflow-hidden shadow-lg">
         <div className="md:w-1/2">
           <img
             src="https://flacio.wpbingosite.com/wp-content/themes/flacio/images/newsletter-image.jpg"

@@ -68,7 +68,7 @@ export default function Header() {
           ) : (
             <div className="flex space-x-4">
               <button onClick={() => navigate("/login")}>
-                <User className="w-5 h-5 text-gray-600 hover:text-green-600" />
+                <User className="w-5 h-5 text-gray-600 dark:text-white hover:text-green-600" />
               </button>
             </div>
           )}

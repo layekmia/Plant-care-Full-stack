@@ -84,14 +84,14 @@ export default function Register() {
   }
 
   return (
-    <div className="h-[calc(100vh-60px)] pt-8 bg-background">
-      <div className="bg-white py-5 px-4 w-[300px] mx-auto shadow-md rounded-md text-center font-sans">
-        <h2 className="text-xl font-semibold text-secondary mb-4 uppercase">
+    <div className="h-[calc(100vh-60px)] pt-8 bg-background dark:bg-dark-background">
+      <div className="bg-white dark:bg-gray-800 py-5 px-4 w-[300px] mx-auto shadow-md rounded-md text-center font-sans">
+        <h2 className="text-xl font-semibold text-secondary mb-4 uppercase dark:text-white">
           Sign up
         </h2>
 
         <button
-          className="flex items-center justify-center gap-2 border bg-gray-50 py-[6px] px-5 rounded-md text-base font-medium w-full"
+         className="flex items-center justify-center gap-2 border dark:border-gray-600 dark:text-white bg-gray-50 py-[6px] px-5 rounded-md text-base font-medium w-full dark:bg-dark-background"
           onClick={handleGoogleLogin}
         >
           <img
@@ -111,7 +111,7 @@ export default function Register() {
               required
               type="text"
               placeholder="Name"
-              className="border w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+              className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
               value={formData.name}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
@@ -126,7 +126,7 @@ export default function Register() {
               required
               type="text"
               placeholder="Photo URL"
-              className="border w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+             className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
               value={formData.photoURL}
               onChange={(e) =>
                 setFormData({ ...formData, photoURL: e.target.value })
@@ -141,7 +141,7 @@ export default function Register() {
               required
               type="email"
               placeholder="Email Address"
-              className="border w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+              className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
@@ -156,7 +156,7 @@ export default function Register() {
               required
               type={`${isShowPass ? "text" : "password"}`}
               placeholder="Password"
-              className="border w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+            className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
               value={formData.password}
               onChange={(e) =>
                 setFormData({ ...formData, password: e.target.value })
@@ -172,10 +172,9 @@ export default function Register() {
               {isShowPass ? <FaEye /> : <FaEyeSlash />}
             </span>
           </div>
-          <p className="text-left font-medium text-primary">Forgot password</p>
           <button
             disabled={isLoading}
-            className={`py-[6px] bg-primary w-full rounded-md mt-5 text-white font-medium text-base ${
+            className={`py-[6px] bg-primary dark:bg-gray-700 w-full rounded-md mt-5 text-white font-medium text-base ${
               isLoading ? "opacity-50" : ""
             }`}
           >
@@ -194,11 +193,11 @@ export default function Register() {
             )}
           </button>
         </form>
-        <p className="text-secondary font-medium mt-5 text-sm">
-          Don't have an account?{" "}
+        <p className="text-secondary font-medium mt-5 text-sm dark:text-white">
+          Don't have an account?
           <button
             onClick={() => navigate("/login")}
-            className="text-primary text-sm hover:underline"
+            className="text-primary text-sm hover:underline dark:text-gray-400"
           >
             Login
           </button>
