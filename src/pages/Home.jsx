@@ -1,5 +1,6 @@
-import AvoidMistakesSection, { CommunityStoriesSection } from "../components/Home/AvoidMistake";
+import AvoidMistakesSection from "../components/Home/AvoidMistake";
 import Banner from "../components/Home/Banner";
+import BringLifeIn from "../components/Home/BringLifein";
 import NewPlants from "../components/Home/NewPlants";
 
 export default function Home() {
@@ -7,8 +8,8 @@ export default function Home() {
    <div>
     <Banner/>
     <NewPlants/>
+    <BringLifeIn/>
     <AvoidMistakesSection/>
-    <CommunityStoriesSection/>
    </div>
   );
 }

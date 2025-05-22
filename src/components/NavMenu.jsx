@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 export default function NavMenu() {
   return (
-    <ul className=" items-center text-sm font-medium font-poppins text-gray-700 hidden md:flex gap-5">
+    <ul className=" items-center text-sm font-medium font-poppins text-gray-700 dark:text-white hidden md:flex gap-5">
       <li>
         <NavLink
           to="/"

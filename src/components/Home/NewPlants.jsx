@@ -53,7 +53,7 @@ const newPlants = [
 
 export default function NewPlants() {
   return (
-    <div className="py-12 md:py-16 lg:py-24">
+    <div className="py-12 md:py-16 lg:py-24 dark:bg-[#111827]">
       <h2 className="max-w-fit mx-auto pb-1 mb-10 text-center  text-2xl lg:text-3xl text-green-800 font-poppins font-semibold uppercase border-b-2 ">
         New Plants
       </h2>
@@ -64,7 +64,7 @@ export default function NewPlants() {
             <span className="absolute top-0 left-0 text-sm uppercase text-stone-700 font-medium font-ReemKufi bg-white px-2 py-1 rounded-sm block">
               {plant.title}
             </span>
-            <button className=" text-stone-600 text-base mt-2 transition-all hover:text-stone-900 font-medium">Learn more</button>
+            <button className=" text-stone-600 dark:text-white text-base mt-2 transition-all hover:text-stone-900 font-medium">Learn more</button>
           </div>
         ))}
       </div>
