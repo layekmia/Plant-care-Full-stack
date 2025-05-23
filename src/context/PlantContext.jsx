@@ -19,7 +19,6 @@ export default function PlantsDataProvider({ children }) {
       } else {
         setUser(null);
         if (!modalShownRef.current) {
-          setShowModal(true);
           modalShownRef.current = true;
         }
       }

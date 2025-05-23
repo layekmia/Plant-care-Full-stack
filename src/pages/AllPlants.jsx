@@ -4,7 +4,7 @@ import { getPlantsData } from "../utils/service";
 import PlantsItem from "../components/PlantsItem";
 
 export default function AllPlants() {
-  const { data } = useLoaderData();
+  const data = useLoaderData();
   const [plants, setPlants] = useState(data);
   const [sortBy, setSortBy] = useState("");
   const [order, setOrder] = useState("asc");
