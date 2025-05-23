@@ -2,10 +2,6 @@
 
 A full-stack, responsive web application to manage and monitor your plants' care schedules. Built with modern technologies including **React**, **Tailwind CSS**, **Express**, and **MongoDB**, the app provides an intuitive interface to add, view, sort, and explore plant data with rich visuals and animations.
 
-![Plant Tracker Banner](https://your-screenshot-or-banner-url-here.com)
-
----
-
 ## 🚀 Live Demo
 
 👉 [Visit the Live Site](https://fabulous-starburst-2600ab.netlify.app/)
@@ -43,6 +39,4 @@ A full-stack, responsive web application to manage and monitor your plants' care
 - RESTful API design
 
 ---
-
-## 📁 Project Structure
 

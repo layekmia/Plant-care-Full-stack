@@ -67,8 +67,11 @@ export default function Header() {
             </Dropdown>
           ) : (
             <div className="flex space-x-4">
-              <button onClick={() => navigate("/login")}>
-                <User className="w-5 h-5 text-gray-600 dark:text-white hover:text-green-600" />
+              <button onClick={() => navigate("/login")} className="dark:text-white hover:text-gray-400">
+                Login
+              </button>
+              <button onClick={() => navigate("/register")} className="dark:text-white hover:text-gray-400">
+                Signup
               </button>
             </div>
           )}

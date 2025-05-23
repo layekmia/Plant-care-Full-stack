@@ -32,7 +32,7 @@ export default function AllPlants() {
   }, [sortBy, order, data,]);
 
   return (
-    <section className="px-2 py-8 dark:bg-dark-background">
+    <section className="px-2 py-16 dark:bg-dark-background">
       <div className="max-w-7xl mx-auto">
         <div>
           <h2 className="text-green-500 dark:text-white font-semibold text-2xl uppercase text-center pt-5 pb-2">
@@ -70,6 +70,7 @@ export default function AllPlants() {
                 <th className="py-3 px-4 text-left">Name</th>
                 <th className="py-3 px-4 text-left">Category</th>
                 <th className="py-3 px-4 text-left">Watering</th>
+                <th className="py-3 px-4 text-left">CareLevel</th>
                 <th className="py-3 px-4 text-left">Action</th>
               </tr>
             </thead>

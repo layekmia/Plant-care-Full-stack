@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../../utils/service";
+import { useNavigate } from "react-router-dom";
 
 export default function NewPlants() {
   const [plants, setPlants] = useState([]);
+  const navigate = useNavigate();
 
   async function getPlants() {
     try {
@@ -30,7 +32,7 @@ export default function NewPlants() {
             <span className="absolute top-0 left-0 text-sm uppercase text-stone-700 font-medium font-ReemKufi bg-white px-2 py-1 rounded-sm block">
               {plant.name}
             </span>
-            <button className=" text-stone-600 dark:text-white text-base mt-2 transition-all hover:text-stone-900 font-medium">Learn more</button>
+            <button onClick={() => navigate(`/plant-details/${plant._id}`)} className=" text-stone-600 dark:text-white text-base mt-2 transition-all hover:text-stone-900 font-medium">Learn more</button>
           </div>
         ))}
       </div>
