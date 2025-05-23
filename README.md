@@ -1,12 +1,48 @@
-# React + Vite
+# 🌿 Plant Care Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack, responsive web application to manage and monitor your plants' care schedules. Built with modern technologies including **React**, **Tailwind CSS**, **Express**, and **MongoDB**, the app provides an intuitive interface to add, view, sort, and explore plant data with rich visuals and animations.
 
-Currently, two official plugins are available:
+![Plant Tracker Banner](https://your-screenshot-or-banner-url-here.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+👉 [Visit the Live Site](https://fabulous-starburst-2600ab.netlify.app/)
+
+---
+
+## ✨ Features
+
+- 🌗 **Dark/Light Mode** — Seamlessly toggle between themes with `useTheme()`.
+- 📋 **All Plants Dashboard** — View all plants in a responsive table layout.
+- 🔍 **Plant Details Page** — View detailed information with formatted dates and user info.
+- 🔃 **Sort Functionality** — Sort plants by **Next Watering Date** or **Care Level** (client-side).
+- 📅 **Date Formatting** — Dates are human-readable with `date-fns`.
+- ⚙️ **Loading Animation** — Integrated `Lottie React` animations for better UX.
+- 📣 **Toast Notifications** — Real-time feedback using `react-toastify`.
+- 🔐 **Authentication Ready** — Easily extendable with user-based actions.
+- 📱 **Fully Responsive** — Optimized for mobile, tablet, and desktop.
+
+---
+
+## 🧰 Tech Stack
+
+### Frontend
+- ⚛️ React (with React Router)
+- 💨 Tailwind CSS
+- 🌙 `useTheme` for dark/light mode
+- 📦 Libraries:
+  - `date-fns` — Date formatting
+  - `react-toastify` — Toast messages
+  - `@lottiefiles/react-lottie-player` — Animations
+
+### Backend
+- 🖥️ Node.js + Express.js
+- 🍃 MongoDB (Atlas) with Mongoose
+- RESTful API design
+
+---
+
+## 📁 Project Structure
+
