@@ -111,7 +111,7 @@ export default function Register() {
               required
               type="text"
               placeholder="Name"
-              className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+              className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
               value={formData.name}
               onChange={(e) =>
                 setFormData({ ...formData, name: e.target.value })
@@ -126,7 +126,7 @@ export default function Register() {
               required
               type="text"
               placeholder="Photo URL"
-             className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+             className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
               value={formData.photoURL}
               onChange={(e) =>
                 setFormData({ ...formData, photoURL: e.target.value })
@@ -141,7 +141,7 @@ export default function Register() {
               required
               type="email"
               placeholder="Email Address"
-              className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+              className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
               value={formData.email}
               onChange={(e) =>
                 setFormData({ ...formData, email: e.target.value })
@@ -156,7 +156,7 @@ export default function Register() {
               required
               type={`${isShowPass ? "text" : "password"}`}
               placeholder="Password"
-            className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+            className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
               value={formData.password}
               onChange={(e) =>
                 setFormData({ ...formData, password: e.target.value })

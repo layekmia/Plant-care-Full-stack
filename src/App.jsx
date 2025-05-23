@@ -6,10 +6,14 @@ import { usePlants } from "./context/PlantContext";
 import Spinner from "./components/Spinner";
 import MobileNabMenu from "./components/MobileNabMenu";
 import SubscribeModal from "./components/SubscriptionModal";
+import { useTheme } from "./context/ThemeContext";
 
 export default function App() {
   const { isLoading, showModal } = usePlants();
   const navigation = useNavigation();
+
+  const { darkMode } = useTheme();
+
   if (isLoading || navigation.state === "loading") return <Spinner />;
 
   return (
@@ -23,7 +27,11 @@ export default function App() {
         <MobileNabMenu />
         {showModal && <SubscribeModal />}
       </div>
-      <ToastContainer autoClose={1000} />
+      {darkMode ? (
+        <ToastContainer autoClose={1000} theme="dark" />
+      ) : (
+        <ToastContainer autoClose={1000} />
+      )}
     </>
   );
 }

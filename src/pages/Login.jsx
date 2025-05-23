@@ -6,7 +6,7 @@ import { FaEye, FaEyeSlash, FaFacebook } from "react-icons/fa6";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { toast } from "react-toastify";
 import { useAuth } from "../context/AuthContext";
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from "firebase/auth";
 import auth from "../firebase/firebase";
 
 export default function Login() {
@@ -45,6 +45,14 @@ export default function Login() {
       toast.error("something went wrong" + error.message);
     }
   }
+  async function hanldeResetPassword(){
+    if(!email) return toast.error("Enter email first")
+    try {
+     await sendPasswordResetEmail(auth, email)
+    } catch (error) {
+      toast.error(error.code)
+    }
+  }
 
   return (
     <div className="h-[calc(100vh-60px)] pt-16 bg-background dark:bg-dark-background">
@@ -69,7 +77,7 @@ export default function Login() {
               required
               type="email"
               placeholder="Email Address"
-              className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+              className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:ring-gray-400"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -82,7 +90,7 @@ export default function Login() {
               required
               type={`${isShowPass ? "text" : "password"}`}
               placeholder="Password"
-              className="border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary"
+              className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:ring-gray-400"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -96,7 +104,7 @@ export default function Login() {
               {isShowPass ? <FaEye /> : <FaEyeSlash />}
             </span>
           </div>
-          <p className="text-left font-medium text-primary dark:text-white">Forgot password</p>
+          <p onClick={hanldeResetPassword} className="text-left cursor-pointer font-medium text-primary dark:text-white hover:underline">Forgot password</p>
           <button
             disabled={isLoading}
             className={`py-[6px] bg-primary dark:bg-gray-700 w-full rounded-md mt-5 text-white font-medium text-base ${
