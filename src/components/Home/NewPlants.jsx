@@ -26,7 +26,7 @@ export default function NewPlants() {
       <div className="max-w-7xl mx-auto px-5 md:px-8  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {plants.slice(0, 8).map((plant) => (
           <div key={plant._id} className="relative">
-            <img className="hover:scale-105 transition-all duration-300 h-[330px] object-cover" src={plant.image} alt="" />
+            <img className="hover:scale-105 transition-all duration-300 h-[330px] w-full object-cover" src={plant.image} alt="" />
             <span className="absolute top-0 left-0 text-sm uppercase text-stone-700 font-medium font-ReemKufi bg-white px-2 py-1 rounded-sm block">
               {plant.name}
             </span>
