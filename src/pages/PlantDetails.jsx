@@ -1,8 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import { getPlantById } from "../utils/service";
+import { format } from "date-fns";
 
 export default function PlantDetails() {
   const plant = useLoaderData();
+
+  const formattedLastWatered = format(new Date(plant.lastWateredDate), "dd MMM yyyy");
+  const formattedNextWatering = format(new Date(plant.nextWateringDate), "dd MMM yyyy");
 
   return (
     <div className="min-h-screen bg-green-50 dark:bg-dark-background py-12 px-4 flex items-center justify-center">
@@ -37,11 +41,11 @@ export default function PlantDetails() {
               </li>
               <li>
                 <span className="font-semibold mr-5">Last Watered:</span>
-                {plant.lastWateredDate}
+                {formattedLastWatered}
               </li>
               <li>
                 <span className="font-semibold mr-5">Next Watering:</span>
-                {plant.nextWateringDate}
+                {formattedNextWatering}
               </li>
               <li>
                 <span className="font-semibold mr-5">Health Status:</span>
@@ -51,8 +55,7 @@ export default function PlantDetails() {
           </div>
 
           <div className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-            Added by: <span className="font-semibold">{plant.userName}</span> (
-            {plant.userEmail})
+            Added by: <span className="font-semibold">{plant.userName}</span> ({plant.userEmail})
           </div>
         </div>
       </div>

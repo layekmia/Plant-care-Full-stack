@@ -12,9 +12,12 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
+    "@lottiefiles/react-lottie-player": "^3.6.0",
     "axios": "^1.9.0",
+    "date-fns": "^4.1.0",
     "firebase": "^11.7.3",
     "flowbite-react": "^0.11.7",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.511.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

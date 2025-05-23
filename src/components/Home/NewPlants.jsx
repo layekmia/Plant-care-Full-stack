@@ -2,57 +2,6 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../../utils/service";
 
-const newPlants = [
-  {
-    id: 1,
-    title: "ZZ Plant",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/zz-plant.jpg",
-  },
-  {
-    id: 2,
-    title: "Aurora",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/aurora-4.jpg",
-  },
-  {
-    id: 3,
-    title: "Echeveria Succulent",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/04/echeveria-succulent-4.jpg",
-  },
-  {
-    id: 4,
-    title: "Devils lvy",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2018/05/devil-ivy-3.jpg",
-  },
-  {
-    id: 5,
-    title: "Jade Succulent",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/jade-succulent-3.jpg",
-  },
-  {
-    id: 6,
-    title: "The Begginner set",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/the-beginner-set-3.jpg",
-  },
-  {
-    id: 7,
-    title: "Pine tree",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2018/10/pine-tree-17.jpg",
-  },
-  {
-    id: 8,
-    title: "Rubby Rubber Tree",
-    image:
-      "https://flacio.wpbingosite.com/wp-content/uploads/2020/12/ruby-rubber-tree-3.jpg",
-  },
-];
-
 export default function NewPlants() {
   const [plants, setPlants] = useState([]);
 

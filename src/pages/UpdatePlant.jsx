@@ -16,6 +16,7 @@ export default function UpdatePlant() {
   const { user } = usePlants();
   const navigate = useNavigate();
   const { id } = useParams();
+   const [loading, setIsLoading] = useState(false);
 
   const plant = useLoaderData();
   const [formData, setFormData] = useState(null);
@@ -48,6 +49,7 @@ export default function UpdatePlant() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     try {
       await axios.put(`${BASE_URL}/${id}`, formData);
       toast.success("Plant updated successfully!");
@@ -55,6 +57,8 @@ export default function UpdatePlant() {
     } catch (error) {
       console.log(error);
       toast.error("Failed to update plant");
+    }finally{
+      setIsLoading(false)
     }
   };
 
@@ -199,11 +203,10 @@ export default function UpdatePlant() {
             />
           </div>
         </div>
-        <button
-          type="submit"
-          className="mt-6 w-full bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition dark:bg-gray-600"
+        <button disabled={loading}
+          className={`mt-6 w-full bg-green-700 dark:bg-gray-600 hover:bg-green-800 text-white font-bold py-2 px-4 rounded-lg transition ${loading ? 'opacity-60': ''}`}
         >
-          Submit
+          {loading ? 'Updating....' : 'Update'}
         </button>
       </form>
     </div>

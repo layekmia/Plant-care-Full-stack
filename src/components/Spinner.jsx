@@ -1,7 +1,15 @@
+import { Player } from '@lottiefiles/react-lottie-player';
+
 export default function Spinner() {
   return (
-    <div className="flex items-center justify-center h-screen bg-white dark:bg-dark-background">
-      <div className="w-16 h-16 border-4 border-green-500 border-dashed rounded-full animate-spin"></div>
+    <div className="flex justify-center items-center min-h-screen dark:bg-dark-background">
+      <Player
+        autoplay
+        loop={true}
+        speed={3}
+        src="https://assets7.lottiefiles.com/packages/lf20_usmfx6bp.json"
+        style={{ height: '300px', width: '300px' }}
+      />
     </div>
   );
 }
