@@ -48,7 +48,8 @@ export default function Login() {
   async function hanldeResetPassword(){
     if(!email) return toast.error("Enter email first")
     try {
-     await sendPasswordResetEmail(auth, email)
+     await sendPasswordResetEmail(auth, email);
+     toast.success("successfully send verification link")
     } catch (error) {
       toast.error(error.code)
     }
