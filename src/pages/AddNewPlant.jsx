@@ -125,7 +125,7 @@ const AddPlant = () => {
               <option value="">Select Care Level</option>
               <option value="Easy">Easy</option>
               <option value="Medium">Medium</option>
-              <option value="Difficult">Difficult</option>
+              <option value="High">High</option>
             </select>
           </div>
           <div>

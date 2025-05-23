@@ -110,6 +110,7 @@ export default function UpdatePlant() {
               <option value="Succulent">Succulent</option>
               <option value="Fern">Fern</option>
               <option value="Flowering">Flowering</option>
+              <option value="Indoor">Indoor</option>
             </select>
           </div>
           <div>
@@ -123,8 +124,8 @@ export default function UpdatePlant() {
             >
               <option value="">Select Care Level</option>
               <option value="Easy">Easy</option>
-              <option value="Moderate">Moderate</option>
-              <option value="Difficult">Difficult</option>
+              <option value="Medium">Medium</option>
+              <option value="Difficult">High</option>
             </select>
           </div>
           <div>
