@@ -35,8 +35,6 @@ export default function Register() {
 
     if (!isValidPassword.test(formData.password))
       return toast.error("Password to weak");
-    console.log(formData);
-
     try {
       setIsLoading(true);
       await createAccount(formData.email, formData.password);
@@ -46,7 +44,6 @@ export default function Register() {
         displayName: formData.name,
         photoURL: formData.photoURL,
       });
-      console.log(user);
       setFormData({
         name: "",
         photoURL: "",
@@ -83,6 +80,14 @@ export default function Register() {
     }
   }
 
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+
   return (
     <div className="h-[calc(100vh-60px)] pt-8 bg-background dark:bg-dark-background">
       <div className="bg-white dark:bg-gray-800 py-5 px-4 w-[300px] mx-auto shadow-md rounded-md text-center font-sans">
@@ -91,7 +96,7 @@ export default function Register() {
         </h2>
 
         <button
-         className="flex items-center justify-center gap-2 border dark:border-gray-600 dark:text-white bg-gray-50 py-[6px] px-5 rounded-md text-base font-medium w-full dark:bg-dark-background"
+          className="flex items-center justify-center gap-2 border dark:border-gray-600 dark:text-white bg-gray-50 py-[6px] px-5 rounded-md text-base font-medium w-full dark:bg-dark-background"
           onClick={handleGoogleLogin}
         >
           <img
@@ -113,9 +118,8 @@ export default function Register() {
               placeholder="Name"
               className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
               value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
+              name="name"
+              onChange={handleChange}
             />
             <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xl text-gray-400">
               <FaUser />
@@ -126,11 +130,10 @@ export default function Register() {
               required
               type="text"
               placeholder="Photo URL"
-             className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
+              name="photoURL"
+              className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
               value={formData.photoURL}
-              onChange={(e) =>
-                setFormData({ ...formData, photoURL: e.target.value })
-              }
+              onChange={handleChange}
             />
             <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xl text-gray-400">
               <IoLink />
@@ -140,12 +143,11 @@ export default function Register() {
             <input
               required
               type="email"
+              name="email"
               placeholder="Email Address"
               className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
               value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
+              onChange={handleChange}
             />
             <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xl text-gray-400">
               <MdOutlineMailOutline />
@@ -156,11 +158,10 @@ export default function Register() {
               required
               type={`${isShowPass ? "text" : "password"}`}
               placeholder="Password"
-            className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
+              name="password"
+              className="dark:text-gray-300 border dark:bg-dark-background dark:border-gray-600 w-full py-[6px] pl-10 rounded-[3px] text-gray-700 placeholder:text-gray-500 outline-none focus:ring-[1.5px] focus:ring-primary dark:focus:ring-gray-400"
               value={formData.password}
-              onChange={(e) =>
-                setFormData({ ...formData, password: e.target.value })
-              }
+              onChange={handleChange}
             />
             <span className="absolute left-2 top-1/2 -translate-y-1/2 text-xl text-gray-400">
               <CiLock />

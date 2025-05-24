@@ -21,7 +21,6 @@ export default function Login() {
 
 
   async function handleLogin(e) {
-    console.log("hi");
     e.preventDefault();
     setIsLoading(true);
     try {
@@ -38,6 +37,7 @@ export default function Login() {
     }
   }
 
+  
   async function handleGoogleLogin() {
     try {
       await signInWithPopup(auth, provider);
