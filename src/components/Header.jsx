@@ -1,5 +1,4 @@
 import { Dropdown, DropdownHeader, DropdownItem } from "flowbite-react";
-import { User } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import NavMenu from "./NavMenu";
 import { FaMoon } from "react-icons/fa";

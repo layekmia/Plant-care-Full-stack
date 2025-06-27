@@ -9,7 +9,7 @@ export default function NewPlants() {
 
   async function getPlants() {
     try {
-      const {data} = await axios(BASE_URL);
+      const {data} = await axios.get(BASE_URL);
       setPlants(data)
     } catch (error) {
      console.error(error)

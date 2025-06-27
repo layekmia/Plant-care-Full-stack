@@ -1,25 +1,29 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { getPlantById } from "../utils/service";
+import { RiArrowGoBackFill } from "react-icons/ri";
 import { format } from "date-fns";
 
 export default function PlantDetails() {
   const plant = useLoaderData();
+  const navigate = useNavigate()
 
   const formattedLastWatered = format(new Date(plant.lastWateredDate), "dd MMM yyyy");
   const formattedNextWatering = format(new Date(plant.nextWateringDate), "dd MMM yyyy");
 
   return (
     <div className="min-h-screen bg-green-50 dark:bg-dark-background py-12 px-4 flex items-center justify-center">
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl max-w-4xl w-full p-5 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl max-w-4xl w-full p-5 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 relative ">
+         <button onClick={() => navigate(-1)} className="absolute right-1 top-1  lg:left-0 lg:top-2 text-base lg:text-xl  lg:py-1 lg:px-2  rounded-md text-gray-500"><RiArrowGoBackFill /></button>
         <div>
           <img
-            src={plant.image}
+            src={plant.image} 
             alt={plant.name}
             className="w-full h-[400px] object-cover rounded-xl"
           />
         </div>
 
         <div className="flex flex-col justify-between">
+         
           <div>
             <h2 className="text-3xl font-bold text-green-800 dark:text-white mb-2">
               {plant.name}

@@ -1,12 +1,23 @@
+import { NavLink, Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/all-plants", label: "All Plants" },
+    { to: "/add-new-plant", label: "Add Plant" },
+    { to: "/dashboard", label: "Dashboard" },
+    { to: "/about-us", label: "About us" },
+  ];
+
+  const baseLinkClasses = "hover:text-green-400";
+
   return (
     <footer className="bg-green-800 text-white dark:bg-[#1f2937]">
       <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6">
         <div>
           <div className="flex items-center text-2xl font-bold gap-2 mb-2">
-           P🌿lantPal
+            P🌿lantPal
           </div>
           <p className="text-sm text-gray-200">
             Helping you grow, water, and care for your plants with confidence.
@@ -14,46 +25,33 @@ export default function Footer() {
         </div>
         <div>
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-gray-200 text-sm">
-            <li>
-              <a href="/" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/all-plants" className="hover:underline">
-                All Plants
-              </a>
-            </li>
-            <li>
-              <a href="/add-new-plant" className="hover:underline">
-                Add Plant
-              </a>
-            </li>
-            <li>
-              <a href="/about-us" className="hover:underline">
-                About Us
-              </a>
-            </li>
-            <li>
-              <a href="/dashboard" className="hover:underline">
-                Dashboard
-              </a>
-            </li>
+          <ul className="hidden md:flex items-start flex-col gap-5 text-sm font-medium font-poppins text-white dark:text-white">
+            {navLinks.map(({ to, label }) => (
+              <li key={to}>
+                <NavLink
+                  to={to}
+                  className={({ isActive }) =>
+                    `${baseLinkClasses} ${isActive ? "text-green-400" : ""}`
+                  }
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
           </ul>
         </div>
         <div>
           <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
           <div className="flex gap-4 text-xl text-white">
-            <a href="#" className="hover:text-green-300">
+            <Link to="#" className="hover:text-green-300">
               <FaFacebookF />
-            </a>
-            <a href="#" className="hover:text-green-300">
+            </Link>
+            <Link to="#" className="hover:text-green-300">
               <FaTwitter />
-            </a>
-            <a href="#" className="hover:text-green-300">
+            </Link>
+            <Link to="#" className="hover:text-green-300">
               <FaInstagram />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

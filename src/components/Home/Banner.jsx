@@ -7,7 +7,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 export default function Banner() {
   return (
    <div className="bg-background dark:bg-dark-background">
-     <div className=" h-[calc(100vh-60px)] md:h-[520px]    md:px-8 lg:px-0">
+     <div className=" h-[calc(100vh-60px)] md:h-[400px]    md:px-8 lg:px-0">
       <Swiper
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         loop={true}
@@ -23,7 +23,7 @@ export default function Banner() {
                 </div>
 
                 <div className="row-start-1 md:row-start-auto">
-                    <img className=" mx-auto md:mx-0 h-[350px] object-contain lg:w-auto lg:ml-auto  md:h-[500px] " src="https://i.ibb.co/NgbG0P18/tree.png" alt="" />
+                    <img className=" mx-auto md:mx-0 h-[350px] object-contain lg:w-auto lg:ml-auto  md:h-[400px] " src="https://i.ibb.co/NgbG0P18/tree.png" alt="" />
                 </div>
             </div>
         </SwiperSlide>
@@ -35,7 +35,7 @@ export default function Banner() {
                 </div>
 
                  <div className="row-start-1 md:row-start-auto">
-                    <img  className=" mx-auto md:mx-0 object-contain h-[350px] lg:w-auto lg:ml-auto  md:h-[500px] " src="https://i.ibb.co/qYc2ygY4/zz-plant-gray-pot-removebg-preview.png" alt="" />
+                    <img  className=" mx-auto md:mx-0 object-contain h-[350px] lg:w-auto lg:ml-auto  md:h-[400px] " src="https://i.ibb.co/qYc2ygY4/zz-plant-gray-pot-removebg-preview.png" alt="" />
                 </div>
             </div>
         </SwiperSlide>
@@ -47,7 +47,7 @@ export default function Banner() {
                 </div>
 
                  <div className="row-start-1 md:row-start-auto">
-                    <img  className=" mx-auto md:mx-0 object-contain h-[350px] lg:w-auto lg:ml-auto  md:h-[500px] " src="https://i.ibb.co/JRXYknxc/peace-lily-plant-white-pot-removebg-preview.png" alt="" />
+                    <img  className=" mx-auto md:mx-0 object-contain h-[350px] lg:w-auto lg:ml-auto  md:h-[400px] " src="https://i.ibb.co/JRXYknxc/peace-lily-plant-white-pot-removebg-preview.png" alt="" />
                 </div>
             </div>
         </SwiperSlide>

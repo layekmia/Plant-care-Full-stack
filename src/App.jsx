@@ -20,7 +20,7 @@ export default function App() {
     <>
       <div className="relative">
         <Header />
-        <main className="min-h-screen">
+        <main className="min-h-screen dark:bg-dark-background">
           <Outlet />
         </main>
         <Footer />

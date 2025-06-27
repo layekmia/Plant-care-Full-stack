@@ -6,17 +6,16 @@ export default function SubscribeModal() {
   const modalRef = useRef();
 
   useEffect(() => {
-    function handleClickOutside(e) {
-      if (modalRef.current && !modalRef.current.contains(e.target)) {
+    const handleClickOutside = (e) => {
+      if(modalRef.current && !modalRef.current.contains(e.target)){
         modalClose();
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [modalClose]);
+    document.addEventListener('click', handleClickOutside );
+
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [modalClose])
 
   return (
    <div  className="fixed px-8 md:px-0 inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">

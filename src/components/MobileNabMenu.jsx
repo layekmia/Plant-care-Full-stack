@@ -34,7 +34,7 @@ export default function MobileNabMenu() {
     <div
       ref={menuRef}
       className={`fixed top-0 bg-white dark:bg-gray-800 h-screen w-[250px] z-50 md:hidden ${
-        isOpen ? "translate-x-0" : "-translate-x-[110%]"
+        isOpen ? "-translate-x-2.5" : "-translate-x-[110%]"
       } transition-transform duration-500`}
     >
       <button
