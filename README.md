@@ -18,7 +18,7 @@ A full-stack, responsive web application to manage and monitor your plants' care
 - ⚙️ **Loading Animation** — Integrated `Lottie React` animations for better UX.
 - 📣 **Toast Notifications** — Real-time feedback using `react-toastify`.
 - 🔐 **Authentication Ready** — Easily extendable with user-based actions.
-- 📱 **Fully Responsive** — Optimized for mobile, tablet, and desktop.
+- 📱 **Fully Responsive** — Optimized for mobile, tablet, and desktop
 
 ---
 
