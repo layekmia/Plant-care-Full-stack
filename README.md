@@ -37,6 +37,5 @@ A full-stack, responsive web application to manage and monitor your plants' care
 - 🖥️ Node.js + Express.js
 - 🍃 MongoDB (Atlas) with Mongoose
 - RESTful API design
-
 ---
 
